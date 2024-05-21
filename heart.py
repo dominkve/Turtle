@@ -38,6 +38,8 @@ def txt(): #defines a function for writing inside the heart
     setpos(-60, 95) # sets the turtle's position to (-60, 95)
   
     pendown() #puts the pen down so the turtle leaves a trace
+
+    color("black") #makes the color of the writing black
   
     write("LOVE", font=("Arial", 32, "normal")) #tells the turtle to write "LOVE", in the font Arial, with a size font size of 32 and in normal font type
   
