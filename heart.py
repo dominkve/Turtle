@@ -8,6 +8,7 @@ def curve():  #defines a function for making a curve
       rt(1) #rotates the turtle clockwise by 1 degree
       
       fd(1) #the turtle takes one step forwards
+    
       
 def heart(): #defines a function for making a heart
   
@@ -29,6 +30,19 @@ def heart(): #defines a function for making a heart
   
   end_fill() #fills the shape it created
   
+
+def txt(): #defines a function for writing inside the heart
+  
+    penup() #lifts the pen up so the turtle leaves no trace
+  
+    setpos(-60, 95) # sets the turtle's position to (-60, 95)
+  
+    pendown() #puts the pen down so the turtle leaves a trace
+  
+    write("LOVE", font=("Arial", 32, "normal")) #tells the turtle to write "LOVE", in the font Arial, with a size font size of 32 and in normal font type
+  
 heart() #makes a heart
+
+txt() #the turtle writes
 
 ht() #hides the turtle
