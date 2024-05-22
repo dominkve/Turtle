@@ -1,0 +1,31 @@
+from turtle import *
+
+speed(10)
+
+for i in range(2):
+  fd(100)
+  lt(50)
+  fd(60)
+  lt(130)
+
+lt(90)
+
+for i in range(4):
+  fd(100)
+  rt(90)
+
+fd(100)
+setheading(0)
+
+for i in range(2):
+  fd(100)
+  lt(50)
+  fd(60)
+  lt(130)
+
+lt(50)
+fd(60)
+setheading(0)
+for i in range(4):
+  fd(100)
+  rt(90)
