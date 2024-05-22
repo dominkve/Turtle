@@ -1,44 +1,102 @@
-from turtle import *
+from turtle import * #imports the turtle module
 
-speed(30)
-def cube():
-  for i in range(2):
-    fd(100)
-    lt(50)
-    fd(60)
-    lt(130)
+
+speed(30) #sets the turtles speed to 30
+
+
+def cube(): #defines a function for making a cube
   
-  lt(90)
-  
-  for i in range(4):
-    fd(100)
-    rt(90)
-  
-  fd(100)
-  setheading(0)
-  
-  for i in range(2):
-    fd(100)
-    lt(50)
-    fd(60)
-    lt(130)
-  
-  lt(50)
-  fd(60)
-  setheading(0)
-  for i in range(4):
-    fd(100)
-    rt(90)
+  for i in range(2): #makes the following repeat 2 times, which makes a parallelogram base
     
-cube()
+    fd(100) #the turtle takes 100 steps forward
+    
+    lt(50) #the turtle rotates 50 degrees anticlockwise
+    
+    fd(60) #the turtle takes 60 steps forwards
+    
+    lt(130) #the turtle roates 130 degrees anticlockwise
+  
+  lt(90) #the turtle rotates 90 degrees anticlockwise
+  
+  for i in range(4): #makes a loop which repeats four times to create a square side
+    
+    fd(100) #the turtle takes 100 steps
+    
+    rt(90) #the turtle rotates 90 degrees clockwise
+  
+  
+  fd(100) #the turtle takes 100 steps forward
+  
+  setheading(0) #the turtle orients itself eastwards
+  
+  for i in range(2): #makes a loop which will repeat for two times to create a parralelogram upper base
+    
+    fd(100) #the turtle takes 100 steps forward
+    
+    lt(50) #the turtle rotates 50 degrees anti-clockwise
+    
+    fd(60) #the turtle takes 60 steps forward
+    
+    lt(130) #the turtle rotates 130 degrees anti-clockwise
+
+  #setting up the turtles position and orientation  
+  
+  lt(50) #the turtle rotates 50 degrees anti-clockwise
+  
+  fd(60) #the turtle takes 60 steps forward
+  
+  setheading(0) #the turtle orients itself eastward
+  
+  #creates the rear side of the cube
+  
+  for i in range(4): #creates a loop which repeats four times
+    
+    fd(100) #the turtle takes 100 steps forward
+    
+    rt(90) #the turtle roates 90 degrees clockwise
+    
+
+cube() #makes the cube
+
+penup() #lifts the pen so it leaves no trace
+
+goto(69.28362831, 162.9813333 + 5) #the turtle goes to those cordinates
+
+pendown() #the turtle laeves a trace again
+
+goto(0, 100) #the turtle goes to those cordinates
+
+goto(69.28362831, 162.9813333 + 5)  #the turtle goes to those cordinates
+
+goto(100, 100) #the turtle goes to those cordinates
+
+goto(69.28362831, 162.9813333 + 5) #the turtle goes to those cordinates
+
+goto(38.56725658, 145.9626659) #the turtle goes to those cordinates
+
+goto(69.28362831, 162.9813333 + 5) #the turtle goes to those cordinates
+
+goto(138.56725658, 145.9626659) #the turtle goes to those cordinates
+
+goto(69.28362831, 162.9813333 + 5) #the turtle goes to those cordinates
+
 penup()
-goto(69.28362831, 162.9813333 + 5)
+goto(0, 0) 
 pendown()
-goto(0, 100)
-goto(69.28362831, 162.9813333 + 5)
-goto(100, 100)
-goto(69.28362831, 162.9813333 + 5)
-goto(38.56725658, 145.9626659)
-goto(69.28362831, 162.9813333 + 5)
-goto(138.56725658, 145.9626659)
-goto(69.28362831, 162.9813333 + 5)
+
+goto(45, 0)
+setheading(90)
+for i in range(2):
+  fd(30) 
+  rt(90)
+  fd(10)
+  rt(90)
+
+fd(15)
+penup()
+setheading(0)
+fd(1)
+pendown()
+fd(2)
+
+ht()
