@@ -1,0 +1,44 @@
+from turtle import *
+
+speed(30)
+def cube():
+  for i in range(2):
+    fd(100)
+    lt(50)
+    fd(60)
+    lt(130)
+  
+  lt(90)
+  
+  for i in range(4):
+    fd(100)
+    rt(90)
+  
+  fd(100)
+  setheading(0)
+  
+  for i in range(2):
+    fd(100)
+    lt(50)
+    fd(60)
+    lt(130)
+  
+  lt(50)
+  fd(60)
+  setheading(0)
+  for i in range(4):
+    fd(100)
+    rt(90)
+    
+cube()
+penup()
+goto(69.28362831, 162.9813333 + 5)
+pendown()
+goto(0, 100)
+goto(69.28362831, 162.9813333 + 5)
+goto(100, 100)
+goto(69.28362831, 162.9813333 + 5)
+goto(38.56725658, 145.9626659)
+goto(69.28362831, 162.9813333 + 5)
+goto(138.56725658, 145.9626659)
+goto(69.28362831, 162.9813333 + 5)
