@@ -1,11 +1,37 @@
 from turtle import * #imports the turtle module
 
+speed(30)
+
 def teleport(x, y):
   penup()
   goto(x, y)
   pendown()
+def bgcolor(color1, color2):
+  teleport(-1000, -1000)
+  fillcolor(color1)
+  begin_fill()
+  for i in range(2):
+    fd(2000)
+    lt(90)
+    fd(1050)
+    lt(90)
+  end_fill()
+  setheading(0)
+  teleport(-1000, 1000)
+  fillcolor(color2)
+  begin_fill()
+  for i in range(2):
+    fd(2000)
+    rt(90)
+    fd(950)
+    rt(90)
+  end_fill()
+  setheading(0)
+  teleport(0, 0)
 
-speed(30) #sets the turtles speed to 30
+bgcolor("green", "blue")
+
+
 
 
 def cube(): #defines a function for making a cube
@@ -20,7 +46,6 @@ def cube(): #defines a function for making a cube
     
       lt(130) #the turtle roates 130 degrees anticlockwise
     if i == 1:
-      color("white")
       for i in range(5):
         fd(10)
         penup()
@@ -33,15 +58,16 @@ def cube(): #defines a function for making a cube
         fd(10)
         pendown()
       lt(130)
-      color("black")
+
   lt(90) #the turtle rotates 90 degrees anticlockwise
-  
+  fillcolor("white")
+  begin_fill()
   for i in range(4): #makes a loop which repeats four times to create a square side
     
     fd(100) #the turtle takes 100 steps
     
     rt(90) #the turtle rotates 90 degrees clockwise
-  
+  end_fill()
   penup() 
   fd(100) #the turtle takes 100 steps forward
   pendown()
@@ -106,53 +132,78 @@ def cube(): #defines a function for making a cube
 
 cube() #makes the cube
 
+teleport(100, 0)
+setheading(50)
+fillcolor("white")
+begin_fill()
+fd(60)
+setheading(90)
+fd(100)
+setheading(230)
+fd(60)
+setheading(270)
+fd(100)
+end_fill()
 penup() #lifts the pen so it leaves no trace
 
 goto(69.28362831, 162.9813333 + 5) #the turtle goes to those cordinates
 
 pendown() #the turtle laeves a trace again
-
+fillcolor("red")
+begin_fill()
 goto(0, 100) #the turtle goes to those cordinates
-
-goto(69.28362831, 162.9813333 + 5)  #the turtle goes to those cordinates
-
 goto(100, 100) #the turtle goes to those cordinates
-
 goto(69.28362831, 162.9813333 + 5) #the turtle goes to those cordinates
-
+end_fill()
+fillcolor("red")
+goto(69.28362831, 162.9813333 + 5) #the turtle goes to those cordinates
+begin_fill()
 goto(38.56725658, 145.9626659) #the turtle goes to those cordinates
+goto(0, 100)
+goto(69.28362831, 162.9813333 + 5)
+end_fill()
+fillcolor("red")
+begin_fill()
 
 goto(69.28362831, 162.9813333 + 5) #the turtle goes to those cordinates
 
-goto(138.56725658, 145.9626659) #the turtle goes to those cordinates
+goto(138.56725658, 145.9626659)
+goto(100, 100)#the turtle goes to those cordinates
 
 goto(69.28362831, 162.9813333 + 5) #the turtle goes to those cordinates
-
+end_fill()
 penup()
 goto(0, 0) 
 pendown()
 
 goto(35, 0)
 setheading(90)
-for i in range(2):
-  fd(50) 
-  rt(90)
-  fd(30)
-  rt(90)
-
+def door():
+  fillcolor("brown")
+  begin_fill()
+  for i in range(2):
+    fd(50) 
+    rt(90)
+    fd(30)
+    rt(90)
+  end_fill()
+door()
 fd(25)
 penup()
 setheading(0)
-fd(1)
+fd(2)
 pendown()
-fd(3)
+fd(4)
 
 teleport(7.5, 25)
 
 def window():
+  fillcolor("lightblue")
+  begin_fill()
   for i in range(4):
     fd(20)
     lt(90)
+  end_fill()
   fd(10)
   setheading(90)
   fd(20)
@@ -174,3 +225,74 @@ def chimney_base():
     fd(10)
     lt(90)
     
+n = 10    
+def curve():  #defines a function for making a curve
+
+  for i in range (200): #makes the following repeat 200 times
+      
+      rt(1) #rotates the turtle clockwise by 1 degree
+      
+      fd(1/n) #the turtle takes one step forwards
+def heart(): #defines a function for making a heart
+  
+  fillcolor("pink") #sets up the filling color
+  
+  begin_fill() #begins tracking what to fill
+  
+  lt(140) #rotates counter clockwise for 140 degrees
+  
+  fd(113/n) #takes 113 steps forwards
+  
+  curve() #makes a curve
+  
+  lt(120) #rotates counter clockwise for 120 degrees
+  
+  curve() #makes a curve
+  
+  fd(112/n) #takes 112 steps forwards
+  
+  end_fill() #fills the shape it created
+teleport(50, 55) 
+#heart() #makes a heart
+
+teleport(100, 0)
+setheading(50)
+fd(15)
+setheading(0)
+def garage():
+  for i in range(2): #makes the following repeat 2 times, which makes a parallelogram base
+      if i == 0:
+        fd(70) #the turtle takes 100 steps forward
+      
+        lt(50) #the turtle rotates 50 degrees anticlockwise
+      
+        fd(45) #the turtle takes 60 steps forwards
+      
+        lt(130) #the turtle roates 130 degrees anticlockwise
+      if i == 1:
+        penup()
+        fd(70)
+        lt(50)
+        fd(45)
+        lt(130)
+        pendown()
+  setheading(90)
+  for i in range(4):
+    fd(70)
+    rt(90)
+  color("white")
+  setheading(50)
+  fd(45)
+  setheading(90)
+  fd(70)
+  
+teleport(35,0)
+fillcolor("gray")
+begin_fill()
+setheading(230)
+fd(100)
+setheading(0)
+fd(30)
+goto(65, 0)
+end_fill()
+#garage()
