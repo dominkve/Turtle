@@ -1,5 +1,9 @@
 from turtle import * #imports the turtle module
 
+def teleport(x, y):
+  penup()
+  goto(x, y)
+  pendown()
 
 speed(30) #sets the turtles speed to 30
 
@@ -7,15 +11,29 @@ speed(30) #sets the turtles speed to 30
 def cube(): #defines a function for making a cube
   
   for i in range(2): #makes the following repeat 2 times, which makes a parallelogram base
+    if i == 0:
+      fd(100) #the turtle takes 100 steps forward
     
-    fd(100) #the turtle takes 100 steps forward
+      lt(50) #the turtle rotates 50 degrees anticlockwise
     
-    lt(50) #the turtle rotates 50 degrees anticlockwise
+      fd(60) #the turtle takes 60 steps forwards
     
-    fd(60) #the turtle takes 60 steps forwards
-    
-    lt(130) #the turtle roates 130 degrees anticlockwise
-  
+      lt(130) #the turtle roates 130 degrees anticlockwise
+    if i == 1:
+      color("white")
+      for i in range(5):
+        fd(10)
+        penup()
+        fd(10)
+        pendown()
+      lt(50)
+      for i in range(3):
+        fd(10)
+        penup()
+        fd(10)
+        pendown()
+      lt(130)
+      color("black")
   lt(90) #the turtle rotates 90 degrees anticlockwise
   
   for i in range(4): #makes a loop which repeats four times to create a square side
@@ -24,36 +42,66 @@ def cube(): #defines a function for making a cube
     
     rt(90) #the turtle rotates 90 degrees clockwise
   
-  
+  penup() 
   fd(100) #the turtle takes 100 steps forward
-  
+  pendown()
   setheading(0) #the turtle orients itself eastwards
-  
-  for i in range(2): #makes a loop which will repeat for two times to create a parralelogram upper base
+  for i in range(2): #makes the following repeat 2 times, which makes a parallelogram base
+    if i == 0:
+      fd(100) #the turtle takes 100 steps forward
     
-    fd(100) #the turtle takes 100 steps forward
+      lt(50) #the turtle rotates 50 degrees anticlockwise
     
-    lt(50) #the turtle rotates 50 degrees anti-clockwise
+      fd(60) #the turtle takes 60 steps forwards
     
-    fd(60) #the turtle takes 60 steps forward
-    
-    lt(130) #the turtle rotates 130 degrees anti-clockwise
+      lt(130) #the turtle roates 130 degrees anticlockwise
+    if i == 1:
+      color("white")
+      for i in range(5):
+        fd(10)
+        penup()
+        fd(10)
+        pendown()
+      lt(50)
+      color("black")
+      
+      fd(60)
+      lt(130)
 
   #setting up the turtles position and orientation  
   
   lt(50) #the turtle rotates 50 degrees anti-clockwise
-  
+  penup()
   fd(60) #the turtle takes 60 steps forward
-  
+  pendown()
   setheading(0) #the turtle orients itself eastward
   
   #creates the rear side of the cube
   
   for i in range(4): #creates a loop which repeats four times
-    
-    fd(100) #the turtle takes 100 steps forward
-    
-    rt(90) #the turtle roates 90 degrees clockwise
+
+    if i == 0:
+      penup()
+      fd(100)
+      pendown()
+      rt(90) #the turtle roates 90 degrees clockwise
+    if i ==1:
+      fd(100)
+      rt(90)
+    if i == 2:
+      penup()
+      fd(100)
+      pendown()
+      rt(90)
+    if i == 3:
+      color("white")
+      for i in range(5):
+        fd(10)
+        penup()
+        fd(10)
+        pendown()
+      color("black")
+
     
 
 cube() #makes the cube
@@ -84,19 +132,45 @@ penup()
 goto(0, 0) 
 pendown()
 
-goto(45, 0)
+goto(35, 0)
 setheading(90)
 for i in range(2):
-  fd(30) 
+  fd(50) 
   rt(90)
-  fd(10)
+  fd(30)
   rt(90)
 
-fd(15)
+fd(25)
 penup()
 setheading(0)
 fd(1)
 pendown()
-fd(2)
+fd(3)
 
-ht()
+teleport(7.5, 25)
+
+def window():
+  for i in range(4):
+    fd(20)
+    lt(90)
+  fd(10)
+  setheading(90)
+  fd(20)
+  setheading(270)
+  fd(10)
+  setheading(0)
+  fd(10)
+  bk(20)
+    
+window()
+teleport(72.5, 25)
+window()
+
+#teleport(105,130)
+#setheading(50)
+def chimney_base():
+  
+  for i in range(4):
+    fd(10)
+    lt(90)
+    
