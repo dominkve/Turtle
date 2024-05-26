@@ -2,6 +2,11 @@ from turtle import * #imports the turtle module
 
 speed(30)
 
+def pu(steps):
+  penup()
+  fd(steps)
+  pendown()
+
 def teleport(x, y):
   penup()
   goto(x, y)
@@ -29,7 +34,7 @@ def bgcolor(color1, color2):
   setheading(0)
   teleport(0, 0)
 
-bgcolor("green", "blue")
+bgcolor("lightgreen", "blue")
 
 
 
@@ -212,7 +217,7 @@ def window():
   setheading(0)
   fd(10)
   bk(20)
-    
+
 window()
 teleport(72.5, 25)
 window()
@@ -296,3 +301,49 @@ fd(30)
 goto(65, 0)
 end_fill()
 #garage()
+def sun():
+  teleport(-200, 140)
+  fillcolor("yellow")
+  begin_fill()
+  circle(60, 360)
+  end_fill()
+sun()
+teleport(-130, 120)
+def bird():
+  for i in range(2):
+    setheading(90)
+    circle(5, 180)
+def birds():
+  xb, yb = pos()
+  teleport(xb, yb)
+  for i in range(4):
+    bird()
+    xb += 30
+    teleport(xb, yb)
+  xb = -112
+  for i in range(3):
+    teleport(xb, yb - 10)
+    xb += 28
+    bird()
+birds()
+teleport(-20, 20)
+setheading(90)
+#circle(115.472809709924528817/3, 180, 8)
+def bush():
+  fillcolor("green")
+  begin_fill()
+  setheading(22.5)
+  for i in range(9):
+    circle(10/3, 180)
+    setheading(22.5 + i*22.5)
+  end_fill()
+def bushes():
+  bush()
+  setheading(245)
+  pu(15)
+  bush()
+  setheading(133)
+  pu(17)
+  bush()
+  
+bushes()
